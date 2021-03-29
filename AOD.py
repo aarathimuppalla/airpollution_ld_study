@@ -1,4 +1,4 @@
-### Tjis file contains fuctions to read AOD data from MOD08 and MYD08 datasets for given region and generate time averaged maps, difference maps and metrics
+### This file contains fuctions to read AOD data from MOD08 and MYD08 datasets for given region and generate time averaged maps, difference maps and metrics
 
 from netCDF4 import Dataset
 import os
@@ -32,9 +32,7 @@ plt.rcParams.update({'font.size': 16})
 ### Outputs: 
 ###     AOD_mean_<start_date>_<end_date>_<con>.csv: daily AOD mean values for he given region from start_date to end_date in csv format in f_path location
 ###     AOD_mean_all: returns Average pixel wise AOD values for the given region (each pixel represents AOD mean value for all the dates within date range given) 
-###     daten: dates for which data is processed.
-  
-
+###     daten: dates for which data is processed. 
 def get_AOD_years(f_path,path,start_date,end_date,years,x,y,con):
 	files=os.listdir(path);
 	date1=[]
@@ -100,7 +98,6 @@ def get_AOD_years(f_path,path,start_date,end_date,years,x,y,con):
 ###     sufix: suffix to store the csv file (eg: "global", "Indian")
 ### Outputs: 
 ###     AOD_mean_<start_date>_<end_date>_<suffix>_cities.csv: daily AOD mean values for he given region from start_date to end_date in csv format in f_path location
-
 def get_AOD_by_coordinates(f_path,path,start_date,end_date,years,coordinate_file,suffix):
 	files=os.listdir(path);
 	date1=[]
@@ -317,6 +314,18 @@ def compare_values(f_path,prefix,var_1,var_2,date_1,date_2,x,y,con):
 	plt.close()
 
 
+#### This function compares matrices var_1 and var_2 and generates mean, min, max and standard deviation values of two matrices; 
+#### mean, min, max and standard deviation of difference matric of these metrices; percentage of pixels greater than 1 std from difference and
+#### percentage of pixels less than 1 std from difference matrix.
+### Inputs:
+###     var_1: matrix 1
+###     var_2: matrix 2
+### Outputs:
+###     metrix1: mean, min, max and standard deviation of var_1 matrix
+###     metrix2: mean, min, max and standard deviation of var_2 matrix
+###     metrix: mean, min, max and standard deviation of (var_2 - var_1) matrix
+###     pos_val: percentage of pixels greater than 1 std from difference matrix.
+###     neg_val: percentage of pixels less than 1 std from difference matrix.
 def calculate_metrix(var_1,var_2):
 
 	val=var_2-var_1
