@@ -15,13 +15,5 @@ Brief descripton of the codes are given below.
 | S.No | Parameter | Data source                                 | Resolution  | Website |
 |------|-----------|---------------------------------------------|-------------|---------|
 | 1    | AOD       | MOD08_D3 from Terra and MYD08_D3 from Aqua  | 1deg x 1deg | https://ladsweb.modaps.eosdis.nasa.gov/ |
-| 2    | NO2       | Aura/OMI | 0.25º×0.25º
-3.5×7 km2
-(year, 2019)
-& 3.5×5.5 km2
-(year,
-2020) | https://earthdata.nasa.gov/ |
-| 3    | CO        | Sentinel-5P/TROPOMI                         |  7×7 km2
-(year, 2019) &
-5.5×7km2
-(year, 2020)           | https://earthdata.nasa.gov/ |
+| 2    | NO2       | Aura/OMI | 0.25º×0.25º 3.5×7 km2 (year, 2019) & 3.5×5.5 km2 (year,2020) | https://earthdata.nasa.gov/ |
+| 3    | CO        | Sentinel-5P/TROPOMI                         |  7×7 km2 (year, 2019) & 5.5×7km2(year, 2020)           | https://earthdata.nasa.gov/ |
