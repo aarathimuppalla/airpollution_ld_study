@@ -1,7 +1,7 @@
 
 ## This python script is a sample code on how to use functions defined in NO2.py to generate time average maps, difference maps, metrix using AOD data
 
-from NO2 import get_no2_years, get_no2_by_coordinates, compare_values_india, calculate_metrix
+from NO2 import get_no2_years, get_no2_by_coordinates, compare_values_india, calculate_metrix, get_no2_years_Tropomi, get_no2_by_coordinates_Tropomi
 import shapefile as shp
 import datetime
 import numpy.ma as ma
@@ -41,7 +41,7 @@ shape=sf.shapeRecords()[0]
 x = [i[0] for i in shape.shape.points[:]]
 y = [i[1] for i in shape.shape.points[:]]
 
-var_1,date_1=get_no2_years(f_path,path1,start_date1,end_date1,years1,x,y,'India')
+var_1,date_1=get_no2_years(f_path,path1,start_date1,end_date1,years1,x,y,'India') # use get_no2_years_Tropomi for tropomi datasets
 var_2,date_2=get_no2_years(f_path,path2,start_date2,end_date2,years2,x,y,'India')
 compare_values_india(f_path,"NO2",var_1,var_2,date_1,date_2,x,y,'NE')
 
