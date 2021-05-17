@@ -1,4 +1,4 @@
-# Measurement Report:An assessment of the impact of a nationwide lockdown on air pollution – a remote sensing perspective over India
+# Measurement Report: An assessment of the impact of a nationwide lockdown on air pollution – a remote sensing perspective over India
 
 This repository contains code used in the study "An assessment of the impact of a nationwide lockdown on air pollution – a remote sensing perspective over India"
 
